@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -236,7 +239,17 @@ nav {
 
 .content {
     display: flex;
+    flex-direction: column;
     background-color: #131313;
+}
+
+.get_secux_name {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 64px; /
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
 }
 
 .cards {
@@ -303,9 +316,6 @@ nav {
     border-radius: 10%;
     z-index: -1;
 }
-
-
-
 
 .card img {
     align-self: center;
@@ -394,6 +404,201 @@ nav {
     color: white;
 }
 
+.show_requirements {
+    align-self: center;
+    width: 15%;
+    height: 5%;
+    margin-bottom: 2%;
+    background-color: rgb(28, 28, 28);
+    color: white; 
+    border: 2px solid rgb(50, 50, 50); 
+    padding: 10px 20px;
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hide_requirements {
+    width: 45%;
+    height: 10%;
+    margin-left: 90%;
+    margin-top: 10px;
+    background-color: rgb(28, 28, 28);
+    color: white; 
+    border: 2px solid rgb(50, 50, 50);
+    padding: 10px 20px;
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hide_requirements:hover, .show_requirements:hover {
+    background-color: rgb(50, 50, 50);
+    transform: scale(1.05);
+}
+
+.hide_requirements:active, .show_requirements:active{
+    background-color: rgb(20, 20, 20);
+    transform: scale(0.95);
+}
+
+
+.requirements {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    transition: max-height 1s ease-out, opacity 0.3s ease-out;
+}
+
+
+.requirements.show {
+    max-height: 1000px; 
+    opacity: 1;
+}
+
+.left_img_req, .right_img_req {
+    width: 15%;
+    height: 15%;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+.left_img_req:hover, .right_img_req:hover {
+    transform: scale(1.1);
+}
+
+.system-requirements {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 40px 10% 40px 10%;
+    border-radius: 12px;
+    max-width: 90%;
+    margin-bottom: 10%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-requirements h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #cd45ff;
+    text-shadow: 0 0 10px rgba(205, 69, 255, 0.7);
+}
+
+table {
+    width: 120%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+}
+
+table th {
+    background-color: #333;
+    color: #cd45ff;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #2a2a2a;
+    color: #bbb;
+}
+
+table tr:hover {
+    background-color: #3b3b3b;
+}
+
+.min {
+    background-color: #4a4a4a;
+    color: #ff9b00; 
+}
+
+.rec {
+    background-color: #3b3b3b;
+    color: #2bc639;
+}
+
+table td, table th {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table th:hover,
+table td:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .system-requirements {
+        width: 95%;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}
+
+.message_req {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    margin: 20px 30px;
+    color: #E32636;
+    text-decoration: none; 
+    position: relative; 
+    padding-bottom: 5px; 
+}
+
+.message_req::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 100%;
+    background: #E32636;
+    transform: scaleX(0);
+    transform-origin: center center; 
+    animation: underlineAnimation 8s infinite linear; 
+}
+
+@keyframes underlineAnimation {
+    0% {
+        transform: scaleX(0); 
+    }
+    50% {
+        transform: scaleX(1); 
+    }
+    100% {
+        transform: scaleX(0); 
+    }
+}
+
+
+
+
+
 .kirt_part {
     padding-top: 5%;
     background-color: rgb(28, 28, 28);
@@ -403,11 +608,31 @@ nav {
     padding-bottom: 500px;
 }
 
-.kirt_part img {
-    width: auto;
-    height: 25%;
-    filter: drop-shadow(5px 5px 10px #cd45ff);
+.kirt_port_img {
     margin-left: 10%;
+}
+
+.kirt_port_img img {
+    width: auto;
+    height: 90%;
+    filter: drop-shadow(5px 5px 10px #cd45ff);
+}   
+
+.name_kirt_port {
+    text-align: center;
+    margin-top: 5%;
+    text-shadow: 0px 0px 15px #cd45ff;
+    color: white;
+    font-family: "Pacifico";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    letter-spacing: 10px;
+    user-select: none;
+}
+
+.name_kirt_port:hover {
+    transform: scale(1.05);
 }
 
 .kirt_part li {
@@ -515,6 +740,7 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
+    cursor: default;
 }
 
 .tech_tile:hover {
@@ -528,6 +754,44 @@ nav {
 .tech_tile i {
     font-size: 32px;
     margin-bottom: 10px;
+}
+
+.additinal_tech {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    margin-top: 5%;
+}
+
+.githublink, .instagram {
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+    background-color: #141414;
+    border-radius: 12px;
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.githublink:hover, .instagram:hover {
+    transform: translateY(-3px);
+    background-color: #1a1a1a;
+    box-shadow: 0 0 15px #cd45ff;
+    border-color: #cd45ff;
+}
+
+.githublink i, .instagram i {
+    transition: color 0.3s ease;
+}
+
+.githublink:hover i, .instagram:hover i {
+    color: #cd45ff;
 }
 
 

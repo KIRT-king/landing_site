@@ -50,6 +50,7 @@
         </div>
     </section>
     <section class="content" id="cards-section">
+        <p class = "get_secux_name">Get Secux</p>
         <div class = "cards">
             <div class="card">
                 <img src = "resources/secux.svg" alt = "linux">
@@ -76,10 +77,65 @@
                 </button>
             </div>
         </div>
+        <button class = "show_requirements">Show System Requirements</button>
+        <div id="requirements_anchor"></div>
+        <div class = "requirements" id = "requirements_id">
+            <img class = "left_img_req" src = "resources/left.JPG">
+            <div class="system-requirements">
+                <h2>System Requirements</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Minimum</th>
+                            <th>Recommended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Processor</td>
+                            <td class="min">Intel Core i3 or AMD Ryzen 3</td>
+                            <td class="rec">Intel Core i5 or AMD Ryzen 5</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td class="min">4 GB</td>
+                            <td class="rec">8 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td class="min">20 GB</td>
+                            <td class="rec">50 GB</td>
+                        </tr>
+                        <tr>
+                            <td>UEFI Support</td>
+                            <td class="min">Required</td>
+                            <td class="rec">Required</td>
+                        </tr>
+                        <tr>
+                            <td>Secure Boot</td>
+                            <td class="min">Optional</td>
+                            <td class="rec">Recommended</td>
+                        </tr>
+                        <tr>
+                            <td>TPM 2.0</td>
+                            <td class="min">Optional</td>
+                            <td class="rec">Recommended</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class = "message_req">The system will not work without UEFI support</p>
+                <button class = "hide_requirements">Hide System Requirements</button>
+            </div>
+            <img class = "right_img_req" src = "resources/left.JPG">
+        </div> 
     </section>
     <section class = "portfolios">
         <div class="kirt_part">
-            <img src = "resources/kirt_port-removebg.png" alt = "kirt_icon">
+            <div class="kirt_port_img">
+                <img src = "resources/kirt_port-removebg.png" alt = "kirt_icon">
+                <p class = "name_kirt_port">KIRT</p>
+            </div>
             <div class = "info_kirt">
                 <h1><i class="fa-solid fa-terminal"></i><span></span></h1>
                 <div class = "tab">
@@ -99,13 +155,16 @@
                         <div class="tech_tile"><i class="fa-solid fa-search"></i> ElasticSearch</div>
                     </div>
                 </div>
-                <div class = "githublink"><i class="fa-brands fa-github"></i>GitHub</div>
-                <div class = "instagram"><i class="fa-brands fa-instagram"></i>Instagram</div>
+                <div class="additinal_tech">
+                    <button class = "githublink"><i class="fa-brands fa-github"></i>GitHub</button>
+                    <button class = "instagram"><i class="fa-brands fa-instagram"></i>Instagram</button>
+                </div>
             </div>
         </div>
 
     </section>
     <footer>
     </footer>
+    <script src = "script.js"></script>
 </body>
 </html>
