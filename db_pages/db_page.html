@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet", href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Table</title>
+</head>
+<body>
+    <h1>User Table</h1>
+    <div>
+        <input type="text" id="usernameInput" placeholder="Enter username" />
+        <button onclick="addUser()">Check User</button>
+    </div>
+    <p class="error" id="errorMessage"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Post</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>Last Check</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+        </tbody>
+    </table>
+
+    <script>
+        async function addUser() {
+            const username = document.getElementById("usernameInput").value.trim();
+            const errorMessage = document.getElementById("errorMessage");
+            const tableBody = document.getElementById("userTableBody");
+
+            errorMessage.textContent = "";
+
+            if (!username) {
+                errorMessage.textContent = "Please enter a username.";
+                return;
+            }
+
+            try {
+                const response = await fetch(`http://127.0.0.1:8001/users/${username}`);
+                if (!response.ok) {
+                    throw new Error("User not found.");
+                }
+
+                const user = await response.json();
+
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.username}</td>
+                    <td>${user.name}</td>
+                    <td>${user.lastname}</td>
+                    <td>${user.post}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone_number}</td>
+                    <td>${user.status}</td>
+                    <td>${user.last_check}</td>
+                `;
+                tableBody.appendChild(row);
+
+                document.getElementById("usernameInput").value = "";
+            } catch (error) {
+                errorMessage.textContent = error.message;
+            }
+        }
+    </script>
+</body>
+</html>

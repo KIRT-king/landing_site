@@ -595,17 +595,13 @@ table td:hover {
     }
 }
 
-
-
-
-
 .kirt_part {
     padding-top: 5%;
     background-color: rgb(28, 28, 28);
     display: flex;
     flex-direction: row;
     gap: 10%;
-    padding-bottom: 500px;
+    padding-bottom: 10%;
 }
 
 .kirt_port_img {
@@ -794,7 +790,205 @@ table td:hover {
     color: #cd45ff;
 }
 
+.kolbanidze_part {
+    display: flex;
+    height: 50vh;
+    background-color: rgb(28, 28, 28);
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
+    margin-left: 3%;
+}
+
+.logos img {
+    height: 100px;
+    margin: 0 20px;
+}
+
+.text_kolbanidze_div {
+    width: 80%;
+    height: 30%;
+    background-color: #2a2a2a;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.text_kolbanidze {
+    font-size: 24px;
+    color: white;
+}
+
+.right {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grigori_port_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Kolbanidze_name {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10%;
+    text-align: center;
+    margin-top: 5%;
+    text-shadow: 0px 0px 15px #cd45ff;
+    color: white;
+    font-family: "Pacifico";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    letter-spacing: 10px;
+    user-select: none;
+}
+
+.Kolbanidze_name:hover {
+    transform: scale(1.05);
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    margin-top: 15px;
+    margin-left: 70%;
+}
+
+.github-btn img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Делает изображение белым */
+    transition: transform 0.3s ease;
+}
+
+.github-btn:hover {
+    background: #cd45ff;
+    color: white;
+}
+
+.github-btn:hover img {
+    transform: scale(1.2);
+}
 
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+footer {
+  background: #181818;
+  color: white;
+  padding: 40px 10%;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-logo p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cd45ff;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #cd45ff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .github-link {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .github-link img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); 
+    transition: transform 0.3s ease;
+  }
+  
+  .github-link:hover {
+    color: #cd45ff;
+  }
+  
+  .github-link:hover img {
+    transform: scale(1.2);
+  }
+  
 
 
